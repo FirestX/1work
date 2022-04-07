@@ -1,0 +1,265 @@
+@import "nullStyle.scss";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=Raleway:wght@100&display=swap');
+
+@mixin under_line($color, $marginT, $marginL) {
+	content: '';
+	position: absolute;
+	background: $color;
+	width: 64px;
+	height: 2px;
+	margin-top: $marginT;
+	margin-left: $marginL;
+}
+/* Colors */
+$orange: #ff8b38;
+$grey: #9a9a9a;
+$lightGrey: #f5f5f5;
+
+/* General */
+.text {
+	font-family: OpenSans;
+ 	font-size: 14px;
+ 	line-height: 1.43;
+ 	color: #86878b;
+}
+.title {
+	object-fit: contain;
+  	font-family: 'Open Sans', sans-serif;
+  	font-size: 20px;
+  	h2 {
+		font-weight: 700;
+  	}
+}
+
+/* Header */
+
+header {
+	background: #000;
+	padding: 23px 150px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	img {
+		width: 79px;
+		height: 29px;
+	}
+	nav {
+		flex: 0 0 auto;
+		width: 40%;
+		ul {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			li {
+				padding: 0px 6%;
+				&:hover {
+
+				}
+				a {
+					object-fit: contain;
+					opacity: 0.69;
+					font-family: OpenSans;
+					color: rgba(255, 255, 255, 0.69);
+				}
+			}
+		}
+	}
+}
+
+/* Top Menu */
+
+.top {
+	background: $grey;
+
+	padding: 110px 150px 140px;
+	height: 720px;
+}
+.top__content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.content__about {
+	max-width: 520px;
+}
+.logo {}
+.top__title {
+	object-fit: contain;
+ 	font-family: Raleway;
+ 	font-size: 36px;
+ 	color: #fff;
+
+ 	margin-top: 33px;
+ 	&:after {
+ 		@include under_line(white, 33px, 7px);
+ 	}
+}
+.top__text {
+	margin-top: 82px;
+
+	object-fit: contain;
+  	opacity: 0.8;
+  	font-family: Raleway;
+  	font-size: 16px;
+  	font-weight: 300;
+  	color: rgba(255, 255, 255, 0.8);
+  	line-height: 1.44;
+}
+.download_btn {
+	margin-top: 44px;
+
+	button {
+		border: 1px solid #fff;
+		background: transparent;
+		color: #fff;
+
+		width: 135px;
+		height: 42px;
+
+		transition: 0.25s;
+		&:hover {
+			color: #000;
+			background: #fff;
+		}
+	}
+}
+
+/* Register */
+.register {
+	width: 100%;
+	max-width: 360px;
+	height: 100%;
+}
+.register__title {
+	padding: 18px 56px 15px 52px;
+	background: $lightGrey;
+	h3 {
+		object-fit: contain;
+  		font-family: OpenSans;
+  		font-size: 20px;
+  		font-weight: 700;
+  		span {
+  			color: $orange;
+  		}
+	}
+}
+.reg__data {
+	position: relative;
+	background: #fff;
+	height: 260px;
+	input {
+		width: 285px;
+		box-shadow: 0px 1px 0 0 rgba(0, 0, 1, 0.16);
+		margin: 36px 45px 0px;
+		&::placeholder {
+			object-fit: contain;
+  			font-family: OpenSans;
+  			font-size: 14px;
+  			color: #bdbdbd;
+		}
+		&:nth-child(5) {
+			margin-top: 50px;
+		}
+		&:nth-child(7) {
+			position: absolute;
+			margin: 0;
+			top: 260px;
+			left: 0;
+
+			width: 100%;
+			height: 54px;
+			background: $orange;
+			color: #fff;
+			cursor: pointer;
+
+			transition: 0.25s;
+			&:hover {
+				background: grey;
+			}
+		}
+	}
+}
+
+
+/* Social */
+.social {
+	padding: 22px;
+
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+
+	img {
+		max-height: 46px;
+	}
+}
+.social__text {
+	.text {
+		max-width: 360px;
+	}
+}
+
+/* Feature1 */
+.feature1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background: $lightGrey;
+	width: 100%;
+	height: 100%;
+	max-height: 595px;
+}
+.feature1__content {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+}
+.tabs {
+}
+.tab {
+	width: 112px;
+	height: 112px;
+	background: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.25s;
+	&:first-child {
+		background: $orange;
+	}
+	h4 {
+		font-family: OpenSans;
+  		font-size: 15px;
+  		font-weight: bold;
+  		line-height: 1.33;
+  		text-transform: uppercase;
+  		color: #fff;
+	}
+	&:hover {
+		background: $orange;
+		cursor: pointer;
+	}
+}
+.feature1__text {
+	max-width: 476px;
+	.text {
+		margin-top: 52px;
+	}
+}
+.feature1__btn {
+	margin-top: 51px;
+	button {
+		background: $orange;
+		width: 121px;
+		height: 46px;
+		border-radius: 3px;
+		color: #fff;
+		transition: 0.25s;
+		&:hover {
+			background: $grey;
+		}
+	}
+}
+
+
